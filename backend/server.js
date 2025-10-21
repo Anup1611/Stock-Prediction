@@ -284,7 +284,7 @@ app.get('/api/news', async (req, res) => {
   
 //sentiment analysis
 
-const HUGGINGFACE_API_KEY = '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';
+const HUGGINGFACE_API_KEY = process.env.HUGGINGFACE_API_KEY;
 const HUGGINGFACE_URL = 'https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english';
 
 app.post('/api/sentiment', async (req, res) => {
